@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
-import '../screens/one.dart';
-import '../screens/two.dart';
-import '../screens/three.dart';
-import '../screens/four.dart';
 
+import '../constants.dart';
+import '../screens/four.dart';
+import '../screens/one.dart';
+import '../screens/three.dart';
+import '../screens/two.dart';
 
 class TabsScreen extends StatefulWidget {
+  // static String routeName = "/";
   @override
   _TabsScreenState createState() => _TabsScreenState();
 }
@@ -19,11 +20,11 @@ class _TabsScreenState extends State<TabsScreen> {
   void initState() {
     _pages = [
       {
-         'page': PageOne(),
+        'page': PageOne(),
         'title': 'Home',
       },
       {
-         'page': PageTwo(),
+        'page': PageTwo(),
         'title': 'Orders',
       },
       {
@@ -31,7 +32,7 @@ class _TabsScreenState extends State<TabsScreen> {
         'title': 'Account',
       },
       {
-         'page': PageFour(),
+        'page': PageFour(),
         'title': 'Help',
       },
     ];
@@ -46,6 +47,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print("hello");
     return Scaffold(
       body: (_pages[_selectedPageIndex]['page'] as Widget),
       bottomNavigationBar: BottomNavigationBar(
@@ -60,14 +62,13 @@ class _TabsScreenState extends State<TabsScreen> {
           BottomNavigationBarItem(
             backgroundColor: veyronColorWhite,
             icon: Icon(Icons.home),
-            title: Text(
-              'Home',
-            ),
+             title: Text('Home'),
+            activeIcon: Icon(Icons.home_filled),
           ),
           BottomNavigationBarItem(
             backgroundColor: veyronColorWhite,
             icon: Icon(Icons.inventory_outlined),
-            title: Text('Orders'),
+            title: Text('Categories'),
           ),
           BottomNavigationBarItem(
             backgroundColor: veyronColorWhite,

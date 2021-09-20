@@ -4,9 +4,10 @@ import './constants.dart';
 
 ThemeData theme() {
   return ThemeData(
-    primarySwatch: Colors.yellow,
-    scaffoldBackgroundColor: veyronColorBody,
-    fontFamily: "Raleway",
+    primaryColor: veyronColorPrimary,
+    accentColor: Colors.deepOrange,
+    scaffoldBackgroundColor: Colors.white,
+    fontFamily: "Michroma",
     appBarTheme: appBarTheme(),
     textTheme: textTheme(),
     // inputDecorationTheme: inputDecorationTheme(),
@@ -35,8 +36,18 @@ ThemeData theme() {
 TextTheme textTheme() {
   return const TextTheme(
     headline1: TextStyle(
-      fontFamily: 'Raleway',
-      fontSize: 18,
+      fontFamily: 'Michroma',
+      fontSize: 14,
+      color: Colors.black,
+    ),
+    bodyText1: TextStyle(
+      fontFamily: 'Michroma',
+      fontSize: 14,
+      color: Colors.black,
+    ),
+    bodyText2: TextStyle(
+      fontFamily: 'Michroma',
+      fontSize: 14,
       color: Colors.black,
     ),
   );
@@ -49,7 +60,7 @@ AppBarTheme appBarTheme() {
     brightness: Brightness.light,
     iconTheme: IconThemeData(color: Colors.white),
     textTheme: TextTheme(
-      headline6: TextStyle(color: Colors.white, fontSize: 25),
+      headline6: TextStyle(color: Colors.white, fontSize: 22),
     ),
   );
 }

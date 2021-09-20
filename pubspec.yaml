@@ -39,7 +39,7 @@ dev_dependencies:
 
 flutter_native_splash:
   color: "#32b3a4"
-  # image: assets/splash_400.png
+  image: assets/veyron.png
   android: true
   ios: true
   # android_gravity: fill
@@ -77,10 +77,9 @@ flutter:
         - asset: assets/fonts/OpenSans-Regular.ttf
         - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
-    - family: Quicksand
+    - family: Michroma
       fonts:
-        - asset: assets/fonts/Quicksand-Regular.ttf
-        - asset: assets/fonts/Quicksand-Bold.ttf
+        - asset: assets/fonts/Michroma-Regular.ttf
           weight: 700
   #   - family: Trajan Pro
   #     fonts:

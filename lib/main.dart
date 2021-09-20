@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:template/screens/one.dart';
 
 import '../components/tabScreen.dart';
 
 
 import 'providers/products.dart';
 import 'providers/auth.dart';
+import 'screens/splash/splash_screen.dart';
 import 'theme.dart';
 
 void main() {
@@ -30,9 +32,11 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         title: 'Title',
         theme:  theme(),
-        initialRoute: '/',
+        initialRoute: SplashScreen.routeName,
         routes: {
-          '/': (ctx) => TabsScreen(),
+          SplashScreen.routeName: (context) => SplashScreen(),
+          // PageOne.routeName: (context) => PageOne()
+           "/": (context) => TabsScreen(),
           // ProductScreen.routeName: (ctx) => ProductScreen(),
           // CouplesScreen.routeName: (ctx) => CouplesScreen(),
           // DaelScreen.routeName: (ctx) => DaelScreen(),
